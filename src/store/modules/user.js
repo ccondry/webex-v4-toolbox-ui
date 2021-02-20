@@ -107,7 +107,7 @@ const actions = {
   },
   async deprovisionUser ({dispatch, getters}, password) {
     try {
-      await dispatch('saveUserDemoConfig', {provision: 'deleted'})
+      await dispatch('saveUserDemoConfig', {provision: 'delete'})
       dispatch('getUser')
     } catch (e) {
       console.log(e)
