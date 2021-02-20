@@ -9,7 +9,7 @@
         Auth API Version {{ authApiVersion }}
       </small>
       <small>
-        © 2020 Cisco and/or its affiliates. All rights reserved.
+        © 2021 Cisco and/or its affiliates. All rights reserved.
       </small>
     </div>
   </panel>
