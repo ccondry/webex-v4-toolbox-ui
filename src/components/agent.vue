@@ -41,7 +41,7 @@
       <p v-if="agent.role === 'Agent'" style="white-space: nowrap;">
         <strong>
           Agent Desktop:
-          <a :href="agentPortalUrl" _target="_blank">
+          <a :href="agentPortalUrl" target="_blank">
             {{ agentPortalUrl }}
           </a>
         </strong>
@@ -51,7 +51,7 @@
       <p v-if="agent.role === 'Supervisor'" style="white-space: nowrap;">
         <strong>
           Management Portal:
-          <a :href="webexAdminPortalUrl" _target="_blank">
+          <a :href="webexAdminPortalUrl" target="_blank">
             {{ webexAdminPortalUrl }}
           </a>
         </strong>
