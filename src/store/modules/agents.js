@@ -24,7 +24,7 @@ const getters = {
         extension: '82' + getters.jwtUser.id,
         name: 'Rick Barrows',
         role: 'Supervisor',
-        description: 'Administrator / Agent'
+        description: 'Administrator / Supervisor'
       }
     ]
   }
