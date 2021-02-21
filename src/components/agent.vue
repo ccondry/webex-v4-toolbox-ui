@@ -14,8 +14,8 @@
 
       <img :src="agent.picture" style="width: 128px; height: 128px;">
 
-      <p>
-        <strong style="white-space:nowrap">
+      <p style="white-space: nowrap;">
+        <strong>
           Username:
           {{ agent.username }}
         </strong>
@@ -38,39 +38,24 @@
         <copy :value="agent.extension" name="Extension" />
       </p>
 
-      <p>
-        <b-field v-if="agent.role === 'Agent'">
-          <b-button
-          type="is-success"
-          rounded
-          expanded
-          :href="agentPortalUrl"
-          tag="a"
-          target="_blank"
-          >
-            Go to Agent Desktop
-          </b-button>
-        </b-field>
-        <b-field v-if="agent.role === 'Supervisor'">
-          <b-button
-          type="is-success"
-          rounded
-          expanded
-          :href="webexAdminPortalUrl"
-          tag="a"
-          target="_blank"
-          >
-            Go to Control Hub
-          </b-button>
-        </b-field>
-        <!-- <b-field>
-          <b-button
-          type="is-success"
-          @click="clickCjpAdminPortal"
-          >
-            Go to Management Portal
-          </b-button>
-        </b-field> -->
+      <p v-if="agent.role === 'Agent'" style="white-space: nowrap;">
+        <strong>
+          Agent Desktop:
+          <a :href="agentPortalUrl" _target="_blank">
+            {{ agentPortalUrl }}
+          </a>
+        </strong>
+        <copy :value="agent.extension" name="Extension" />
+      </p>
+
+      <p v-if="agent.role === 'Supervisor'" style="white-space: nowrap;">
+        <strong>
+          Management Portal:
+          <a :href="webexAdminPortalUrl" _target="_blank">
+            {{ webexAdminPortalUrl }}
+          </a>
+        </strong>
+        <copy :value="agent.extension" name="Extension" />
       </p>
     </article>
   </div>
