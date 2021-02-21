@@ -45,7 +45,7 @@
             {{ agentPortalUrl }}
           </a>
         </strong>
-        <copy :value="agent.extension" name="Extension" />
+        <copy :value="agentPortalUrl" name="Agent Desktop URL" />
       </p>
 
       <p v-if="agent.role === 'Supervisor'" style="white-space: nowrap;">
@@ -55,7 +55,7 @@
             {{ webexAdminPortalUrl }}
           </a>
         </strong>
-        <copy :value="agent.extension" name="Extension" />
+        <copy :value="webexAdminPortalUrl" name="Management Portal URL" />
       </p>
     </article>
   </div>
