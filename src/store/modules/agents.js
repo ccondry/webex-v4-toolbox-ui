@@ -12,7 +12,7 @@ const getters = {
         picture: imageFolder + '/sandra.png',
         username: 'sjeffers' + getters.jwtUser.id + '@' + state.loginDomain,
         password: 'C1sco12345',
-        extension: '1080' + getters.jwtUser.id,
+        extension: '80' + getters.jwtUser.id,
         name: 'Sandra Jefferson',
         role: 'Agent',
         description: 'Agent'
@@ -21,7 +21,7 @@ const getters = {
         picture: imageFolder + '/rick.png',
         username: 'rbarrows' + getters.jwtUser.id + '@' + state.loginDomain,
         password: 'C1sco12345',
-        extension: '1082' + getters.jwtUser.id,
+        extension: '82' + getters.jwtUser.id,
         name: 'Rick Barrows',
         role: 'Supervisor',
         description: 'Administrator / Agent'
