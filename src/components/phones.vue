@@ -1,19 +1,23 @@
 <template>
   <panel title="Phones" aria-id="phones">
-    <div style="display: flex; flex-wrap: wrap;">
+    <div>
       <p>
         Your agents will need a Webex or Webex Calling app to receive
-        voice calls on their extensions. Download one of them here:
+        voice calls on their extensions.
+        <br />
+        Download one of them here:
       </p>
-      <div>
-        <a :href="links.webex" download>Webex</a>
-      </div>
-      <div>
-        <a :href="links.windows" download>Webex Calling (Windows)</a>
-      </div>
-      <div>
-        <a :href="links.mac" download>Webex Calling (Mac)</a>
-      </div>
+      <ul>
+        <li>
+          <a :href="links.webex" download>Webex</a>
+        </li>
+        <li>
+          <a :href="links.windows" download>Webex Calling (Windows)</a>
+        </li>
+        <li>
+          <a :href="links.mac" download>Webex Calling (Mac)</a>
+        </li>
+      </ul>
     </div>
   </panel>
 </template>
