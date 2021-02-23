@@ -20,6 +20,9 @@
         <!-- Provision In Progress -->
         <provision-progress v-if="isProvisionStarted && !isProvisioned" />
 
+        <!-- Phones -->
+        <phones v-if="isProvisioned" />
+
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
 
@@ -54,6 +57,7 @@ import Reprovision from './components/reprovision'
 import AppFooter from './components/app-footer'
 // import Debug from './components/debug'
 import Admin from './components/admin'
+import Phones from './components/phones'
 
 export default {
   components: {
@@ -66,7 +70,8 @@ export default {
     Reprovision,
     AppFooter,
     // Debug,
-    Admin
+    Admin,
+    Phones
   },
 
   computed: {
