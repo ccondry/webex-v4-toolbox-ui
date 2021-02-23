@@ -3,6 +3,7 @@
   :aria-id="ariaId"
   class="panel"
   animation="slide"
+  :open="open"
   >
     <div
     v-if="title.length"
@@ -35,6 +36,10 @@ export default {
     ariaId: {
       default: '',
       type: String
+    },
+    open: {
+      default: true,
+      type: Boolean
     }
   }
 }

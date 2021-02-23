@@ -1,6 +1,6 @@
 <template>
   <!-- full config details for user when using admin using switch-user -->
-  <panel title="Admin" aria-id="admin">
+  <panel title="Admin" aria-id="admin" :open="false">
     <b-loading :active="isLoading || isWorking" :is-full-page="false" />
     <p>
       Manually enter this user's demo configuration, then click Save.
