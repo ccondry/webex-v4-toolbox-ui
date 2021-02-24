@@ -34,8 +34,10 @@ export default {
     return {
       links: {
         webex: 'https://www.webex.com/downloads.html/',
-        windows: 'https://rialto.broadcloudpbx.com/btbc/mac/Webex_Calling.msi',
-        mac: 'https://rialto.broadcloudpbx.com/btbc/mac/Webex_Calling.dmg'
+        // windows: 'https://rialto.broadcloudpbx.com/btbc/mac/Webex_Calling.msi',
+        // mac: 'https://rialto.broadcloudpbx.com/btbc/mac/Webex_Calling.dmg'
+        windows: 'https://mm-static.cxdemo.net/Webex_Calling.msi',
+        mac: 'https://mm-static.cxdemo.net/Webex_Calling.dmg'
       }
     }
   },

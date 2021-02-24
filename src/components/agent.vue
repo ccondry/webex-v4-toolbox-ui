@@ -38,7 +38,7 @@
         <copy :value="agent.extension" name="Extension" />
       </p>
 
-      <p v-if="agent.role === 'Agent'" style="white-space: nowrap;">
+      <p style="white-space: nowrap;">
         <strong>
           Agent Desktop:
           <a :href="agentPortalUrl" target="_blank">
@@ -51,11 +51,11 @@
       <p v-if="agent.role === 'Supervisor'" style="white-space: nowrap;">
         <strong>
           Management Portal:
-          <a :href="webexAdminPortalUrl" target="_blank">
-            {{ webexAdminPortalUrl }}
+          <a :href="cjpAdminPortalUrl" target="_blank">
+            {{ cjpAdminPortalUrl }}
           </a>
         </strong>
-        <copy :value="webexAdminPortalUrl" name="Management Portal URL" />
+        <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />
       </p>
     </article>
   </div>
@@ -75,7 +75,8 @@ export default {
   computed: {
     ...mapGetters([
       'agentPortalUrl',
-      'webexAdminPortalUrl'
+      // 'webexAdminPortalUrl',
+      'cjpAdminPortalUrl'
     ])
   },
   
