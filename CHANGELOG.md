@@ -3,6 +3,14 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.2.24
+
+### Features
+* **Provision:** Update links on agent info, add copy button to them. Update
+agent extensions. Add Portal admin link for Rick Barrows. Add links to download
+agent phone software.
+
+
 # 2021.2.18
 
 ### Features
