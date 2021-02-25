@@ -1,5 +1,6 @@
 import {
   DialogProgrammatic as Dialog,
+  ToastProgrammatic as Toast
 } from 'buefy/src'
 
 import * as types from '../mutation-types'
@@ -146,24 +147,30 @@ const actions = {
     })
   },
   async saveUserDemoConfig ({dispatch, getters}, body) {
-    try {
-      await dispatch('fetch', {
-        group: 'user',
-        type: 'demoConfig',
-        url: getters.endpoints.userDemoConfig,
-        options: {
-          method: 'POST',
-          body,
-          query: {
-            id: 'webex-v4prod'
-          }
-        },
-        message: 'save user demo configuration'
+    const response = await dispatch('fetch', {
+      group: 'user',
+      type: 'demoConfig',
+      url: getters.endpoints.userDemoConfig,
+      options: {
+        method: 'POST',
+        body,
+        query: {
+          id: 'webex-v4prod'
+        }
+      },
+      message: 'Save demo configuration',
+      showNotification: true
+    })
+    if (response instanceof Error) {
+      // error
+    } else {
+      // success
+      Toast.open({
+        message: 'Saved your demo configuration.',
+        type: 'is-success'
       })
       // refresh state data
       dispatch('getUser')
-    } catch (e) {
-      console.log(e.message)
     }
   },
   setJwt ({commit, dispatch}, jwt) {
