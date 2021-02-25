@@ -44,7 +44,21 @@ const getters = {
   // the base demo configuration for this instant demo
   demoBaseConfig: state => state.demoBaseConfig,
   // the instant demo instance information, like session ID and datacenter
-  instance: state => state.instance
+  instance: state => state.instance,
+  // the RDP workstation info
+  rdpAddress: (state, getters) => {
+    return `${getters.rdpFqdn} (${getters.rdpIp})`
+  },
+  rdpIp: (state, getters) => {
+    return '198.18.134.210'
+  },
+  rdpFqdn: (state, getters) => {
+    return 'rdp.dcloud.cisco.com'
+  },
+  // the VPN address
+  vpnAddress: (state, getters) => {
+    return 'vpn.cc1.dc-01.com'
+  }
 }
 
 const actions = {

@@ -20,14 +20,20 @@
         <!-- Provision In Progress -->
         <provision-progress v-if="isProvisionStarted && !isProvisioned" />
 
-        <!-- Phones -->
-        <phones v-if="isProvisioned" />
+        <!-- VPN -->
+        <vpn v-if="isProvisioned" />
+
+        <!-- Workstation -->
+        <workstation v-if="isProvisioned" />
 
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
 
         <!-- Demo Website -->
         <demo-website v-if="isProvisioned" />
+
+        <!-- Phones -->
+        <phones v-if="isProvisioned" />
 
         <!-- Reprovision -->
         <reprovision v-if="isProvisioned" />
@@ -58,6 +64,8 @@ import AppFooter from './components/app-footer'
 // import Debug from './components/debug'
 import Admin from './components/admin'
 import Phones from './components/phones'
+import Workstation from './components/workstation'
+import Vpn from './components/vpn'
 
 export default {
   components: {
@@ -71,7 +79,9 @@ export default {
     AppFooter,
     // Debug,
     Admin,
-    Phones
+    Phones,
+    Workstation,
+    Vpn
   },
 
   computed: {

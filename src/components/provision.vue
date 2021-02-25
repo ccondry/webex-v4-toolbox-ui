@@ -47,7 +47,22 @@ export default {
     ]),
     clickProvision () {
       console.log('user clicked Provision Me button')
-      this.provisionUser()
+      let message = `Please choose a new password for your VPN account. <br>Do `
+      message += `not reuse your Cisco account password.`,
+      this.$buefy.dialog.prompt({
+        title: 'Provision',
+        message,
+        inputAttrs: {
+          placeholder: 'Your new VPN password',
+          type: 'password'
+        },
+        rounded: true,
+        confirmText: 'Submit',
+        type: 'is-success',
+        onConfirm: password => {
+          this.provisionUser(password)
+        }
+      })
     }
   }
 }

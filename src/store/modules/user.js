@@ -127,7 +127,7 @@ const actions = {
       message: 'reset password'
     })
   },
-  async provisionUser ({dispatch, getters}) {
+  async provisionUser ({dispatch, getters}, password) {
     try {
       // start user provision
       await dispatch('fetch', {
@@ -139,7 +139,8 @@ const actions = {
           method: 'POST',
           body: {
             demo: 'webex',
-            version: 'v4prod'
+            version: 'v4prod',
+            password
           }
         }
       })
