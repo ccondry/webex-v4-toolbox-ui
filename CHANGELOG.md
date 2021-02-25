@@ -3,6 +3,17 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.2.25-4
+
+### Features
+* **Mobile App:** Added mobile app connection info.
+
+### Bug Fixes
+* **Demo Website:** Don't block the Go to Demo Website button when loading verticals or setting the vertical.
+* **Session Info:** Fix session info to get the right global session details 
+regardless of which toolbox datacenter they are using.
+
+
 # 2021.2.25-3
 
 ### Features
