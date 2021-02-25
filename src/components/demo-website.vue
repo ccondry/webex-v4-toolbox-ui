@@ -1,12 +1,12 @@
 <template>
   <panel title="Demo Website" aria-id="demo-website">
-    <b-loading :active="isLoading || isWorking" :is-full-page="false" />
     <p>
       Choose the vertical you want to use, then click Go to Demo Website to
       show the customer side of the demo.
     </p>
     <div style="display: flex; justify-content: space-around;">
-      <b-field>
+      <b-field style="position: relative;">
+        <b-loading :active="isLoading || isWorking" :is-full-page="false" />
         <b-select
         v-model="vertical" 
         :disabled="working.app.user"
