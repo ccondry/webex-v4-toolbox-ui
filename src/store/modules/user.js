@@ -113,20 +113,6 @@ const actions = {
       console.log(e)
     }
   },
-  resetPassword ({dispatch, getters}, password) {
-    dispatch('fetch', {
-      group: 'user',
-      type: 'password',
-      url: getters.endpoints.password,
-      options: {
-        method: 'POST',
-        body: {
-          password
-        }
-      },
-      message: 'reset password'
-    })
-  },
   async provisionUser ({dispatch, getters}, password) {
     try {
       // start user provision
