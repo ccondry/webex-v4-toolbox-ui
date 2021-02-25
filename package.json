@@ -13,6 +13,7 @@
     "dist": "cross-env NODE_ENV=production webpack --config tools/webpack.demo.js",
     "dist:test": "yarn dist && node tools/test.js",
     "lint": "eslint src --quiet --ext .js,.vue",
+    "lint:fix": "eslint src --fix --ext .js,.vue",
     "prepublishOnly": "yarn build",
     "start": "cross-env NODE_ENV=development PLAY_ENV=true webpack-dev-server --config tools/webpack.demo.js"
   },
