@@ -54,9 +54,9 @@ export default {
     admin () {
       return {
         picture: this.imageFolder + '/helen.png',
-        username: 'dcloud-wxcc.gen@cisco.com',
-        password: 'C1sco12345',
-        name: 'dCloud Webex CC Administrator',
+        username: 'dcloudwxcc@gmail.com',
+        password: 'C1sco12345!',
+        name: 'Administrator',
         role: 'Administrator',
         description: 'Administrator'
       }
