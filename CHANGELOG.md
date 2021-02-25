@@ -3,6 +3,17 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.2.25-3
+
+### Features
+* **Demo Website:** Remove unused features for finding and selecting other
+verticals. Make the Go to Demo Website button a link that can be copied.
+* **Agents:** Update login info and links.
+* **Laptop Demo:** Update phones title to Laptop Demo, and update the content
+wording.
+* **Reprovision:** Update the content wording.
+
+
 # 2021.2.25-2
 
 ### Features
