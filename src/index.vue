@@ -20,6 +20,9 @@
         <!-- Provision In Progress -->
         <provision-progress v-if="isProvisionStarted && !isProvisioned" />
 
+        <!-- Demo Website -->
+        <demo-website v-if="isProvisioned" />
+
         <!-- VPN -->
         <vpn v-if="isProvisioned" />
 
@@ -28,9 +31,6 @@
 
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
-
-        <!-- Demo Website -->
-        <demo-website v-if="isProvisioned" />
 
         <!-- Phones -->
         <phones v-if="isProvisioned" />
