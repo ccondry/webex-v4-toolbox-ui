@@ -59,12 +59,23 @@ export default {
       }, 1000)
     },
     clickProvision () {
-      console.log('user clicked Reprovision button')
-      this.provisionUser()
-      // not first provision
-      // set timer for working estimate to 45 seconds
-      this.timerEnd = new Date().getTime() + 45 * 1000
-      this.startTimer()
+      console.log('user clicked Provision Me button')
+      let message = `Please set a password for your VPN account. <br>Do `
+      message += `not re-use your Cisco account password.`,
+      this.$buefy.dialog.prompt({
+        title: 'Provision',
+        message,
+        inputAttrs: {
+          placeholder: 'Your new VPN password',
+          type: 'password'
+        },
+        rounded: true,
+        confirmText: 'Submit',
+        type: 'is-success',
+        onConfirm: password => {
+          this.provisionUser(password)
+        }
+      })
     }
   }
 }
