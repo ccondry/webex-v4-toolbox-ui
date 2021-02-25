@@ -3,6 +3,12 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.2.25-2
+
+### Features
+* **Agents:** Add administrator agent for Control Hub / Management Portal.
+
+
 # 2021.2.25-1
 
 ### Features
