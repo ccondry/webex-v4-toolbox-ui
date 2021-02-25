@@ -1,11 +1,12 @@
 <template>
   <panel title="Reprovision" aria-id="reprovision">
     <p>
-      Your account is already provisioned for this demo, but you can run it
-      again if you need to.
+      Your account is already provisioned for this demo. Would you like to
+      provision again anyway? 
     </p>
     <p>
-      Would you like to provision again anyway?
+      This will check that all your logins, extensions, queues, etc. are created
+      properly.
     </p>
     <b-field>
       <b-button
@@ -43,7 +44,7 @@ export default {
       if (this.working.user.provision) {
         return `Working...`       
       } else {
-        return 'Yes, Provision Me Anyway'
+        return 'Yes, Fix My Account'
       }
     }
   },
