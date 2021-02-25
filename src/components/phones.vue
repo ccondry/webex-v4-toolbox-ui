@@ -1,13 +1,12 @@
 <template>
-  <panel title="Phones" aria-id="phones">
+  <panel title="Laptop Demo" aria-id="phones">
     <div>
       <p>
+        If you don't want to use the RDP workstation, you can connect your
+        agent's phone using the Webex app on your laptop.
+        <br>
         Your agents will need a Webex or Webex Calling app to receive
         voice calls on their extensions.
-        <br>
-        If you don't want to use the RDP
-        workstation, you can connect your agent's phone using your local Webex
-        app.
         <br>
         Download one of them here:
       </p>
