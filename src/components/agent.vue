@@ -16,10 +16,21 @@
 
       <p style="white-space: nowrap;">
         <strong>
-          Username:
+          Webex Username:
           {{ agent.username }}
         </strong>
-        <copy :value="agent.username" name="Username" />
+        <copy :value="agent.username" name="Webex Username" />
+      </p>
+      
+      <p
+      v-if="['Agent', 'Supervisor'].includes(agent.role)"
+      style="white-space: nowrap;"
+      >
+        <strong>
+          RDP Username:
+          {{ agent.rdpUsername }}
+        </strong>
+        <copy :value="agent.rdpUsername" name="RDP Username" />
       </p>
 
       <p>
