@@ -4,11 +4,11 @@
       <p>
         Your agents will need a Webex or Webex Calling app to receive
         voice calls on their extensions.
-        <br />
+        <br>
         If you don't want to use the RDP
         workstation, you can connect your agent's phone using your local Webex
         app.
-        <br />
+        <br>
         Download one of them here:
       </p>
       <ul>
