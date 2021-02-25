@@ -32,6 +32,9 @@
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
 
+        <!-- Mobile App -->
+        <mobile-app v-if="isProvisioned" />
+
         <!-- Phones -->
         <phones v-if="isProvisioned" />
 
@@ -63,6 +66,7 @@ import Reprovision from './components/reprovision'
 import AppFooter from './components/app-footer'
 // import Debug from './components/debug'
 import Admin from './components/admin'
+import MobileApp from './components/mobile-app'
 import Phones from './components/phones'
 import Workstation from './components/workstation'
 import Vpn from './components/vpn'
@@ -79,6 +83,7 @@ export default {
     AppFooter,
     // Debug,
     Admin,
+    MobileApp,
     Phones,
     Workstation,
     Vpn

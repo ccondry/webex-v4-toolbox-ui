@@ -7,7 +7,13 @@ const state = {
   // the base configuration for this demo
   // demoBaseConfig: {},
   // dcloud session ID and datacenter information
-  instance: {}
+  instance: {},
+  datacenterNames: {
+    'RTP': 'US East',
+    'SJC': 'US West',
+    'LON': 'EMEAR',
+    'SNG': 'APJ'
+  }
 }
 
 const mutations = {
@@ -24,6 +30,11 @@ const mutations = {
 }
 
 const getters = {
+  datacenter: state => state.instance.datacenter,
+  sessionId: state => state.instance.id,
+  datacenterDisplayName: (state, getters) => {
+    return state.datacenterNames[getters.datacenter]
+  },
   // is this demo locked to disable provisioning?
   // isLocked: (state, getters) => {
   //   return getters.demoBaseConfig.locked === true
@@ -34,8 +45,8 @@ const getters = {
   brandDemoLink (state, getters) {
     try {
       return addUrlQueryParams('https://mm-brand.cxdemo.net', {
-        session: state.instance.id,
-        datacenter: state.instance.datacenter,
+        session: getters.sessionId,
+        datacenter: getters.datacenter,
         userId: getters.jwtUser.id
       })
     } catch (e) {
