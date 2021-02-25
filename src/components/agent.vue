@@ -30,7 +30,9 @@
         <copy :value="agent.password" name="Password" />
       </p>
       
-      <p>
+      <p
+      v-if="['Agent', 'Supervisor'].includes(agent.role)"
+      >
         <strong>
           Extension:
           {{ agent.extension }}
@@ -38,7 +40,10 @@
         <copy :value="agent.extension" name="Extension" />
       </p>
 
-      <p style="white-space: nowrap;">
+      <p
+      v-if="agent.role === 'Agent'"
+      style="white-space: nowrap;"
+      >
         <strong>
           Agent Desktop:
           <a :href="agentPortalUrl" target="_blank">
@@ -48,7 +53,10 @@
         <copy :value="agentPortalUrl" name="Agent Desktop URL" />
       </p>
 
-      <p v-if="agent.role === 'Supervisor'" style="white-space: nowrap;">
+      <p
+      v-if="agent.role === 'Administrator'"
+      style="white-space: nowrap;"
+      >
         <strong>
           Management Portal:
           <a :href="cjpAdminPortalUrl" target="_blank">
@@ -56,6 +64,19 @@
           </a>
         </strong>
         <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />
+      </p>
+
+      <p
+      v-if="['Supervisor', 'Administrator'].includes(agent.role)"
+      style="white-space: nowrap;"
+      >
+        <strong>
+          Control Hub:
+          <a :href="webexAdminPortalUrl" target="_blank">
+            {{ webexAdminPortalUrl }}
+          </a>
+        </strong>
+        <copy :value="webexAdminPortalUrl" name="Control Hub URL" />
       </p>
     </article>
   </div>
@@ -75,7 +96,7 @@ export default {
   computed: {
     ...mapGetters([
       'agentPortalUrl',
-      // 'webexAdminPortalUrl',
+      'webexAdminPortalUrl',
       'cjpAdminPortalUrl'
     ])
   },
