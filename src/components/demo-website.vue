@@ -6,8 +6,8 @@
       show the customer side of the demo.
     </p>
     <div style="display: flex; justify-content: space-around;">
-      <b-field grouped>
-        <b-select 
+      <b-field>
+        <b-select
         v-model="vertical" 
         :disabled="working.app.user"
         @change.native="verticalChanged" 
