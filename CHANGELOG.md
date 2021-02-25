@@ -3,6 +3,14 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.2.25
+
+### Features
+* **VPN:** Add VPN connection info.
+* **RDP Workstation:** Add RDP workstation connection info.
+* **Provision:** Ask for new VPN password when starting provision.
+
+
 # 2021.2.24
 
 ### Features
