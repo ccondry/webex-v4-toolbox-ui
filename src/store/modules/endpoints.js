@@ -18,12 +18,12 @@ const getters = {
       webex: authUrlBase + '/resource/joinWebexSupportRoom',
       authVersion: authUrlBase + '/version',
       logout: authUrlBase + '/logout',
-      demoBaseConfig: mmUrlBase + '/demo',
+      // demoBaseConfig: mmUrlBase + '/demo',
       vertical: mmUrlBase + '/verticals',
       provision: authUrlBase + '/provision',
       userDemoConfig: authUrlBase + '/user/demo',
       user: authUrlBase + '/user',
-      instance: authUrlBase + '/instance',
+      session: mmUrlBase + '/sessions',
     }
   },
   defaultRestOptions: (state, getters) => {
