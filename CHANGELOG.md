@@ -3,6 +3,12 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.2
+
+### Features
+* **VPN:** Add a VPN address for each datacenter.
+
+
 # 2021.2.25-5
 
 ### Bug Fixes
