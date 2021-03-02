@@ -68,10 +68,10 @@ const getters = {
   rdpAddress: (state, getters) => {
     return `${getters.rdpFqdn} (${getters.rdpIp})`
   },
-  rdpIp: (state, getters) => {
+  rdpIp: () => {
     return '198.18.134.210'
   },
-  rdpFqdn: (state, getters) => {
+  rdpFqdn: () => {
     return 'rdp.dcloud.cisco.com'
   },
   // the VPN address
