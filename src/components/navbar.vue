@@ -2,7 +2,7 @@
   <b-navbar
   :transparent="true"
   :fixed-top="true"
-  style="background-color: rgba(0, 0, 0, 0)"
+  style="background-color: rgba(0, 0, 0, 0); pointer-events: none;"
   >
     <template slot="start">
       <b-field class="navbar-item">
@@ -12,6 +12,7 @@
         tag="a"
         href="/"
         aria-label="Toolbox Home"
+        style="pointer-events: initial;"
         >
           Toolbox Home
         </b-button>
@@ -27,6 +28,7 @@
           rounded
           aria-label="Admin"
           @click="clickAdmin"
+          style="pointer-events: initial;"
           >
             Admin
           </b-button>
@@ -36,6 +38,7 @@
           rounded
           aria-label="Log Out"
           @click="clickLogout"
+          style="pointer-events: initial;"
           >
             Log Out
           </b-button>
