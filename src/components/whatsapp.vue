@@ -16,7 +16,9 @@
       <strong>{{ whatsappPhoneNumber }}</strong> using Whatsapp,
       or scan this QR code to do it automatically:
     </p>
-    <img :src="whatsappQrUrl" />
+    <div style="display: flex; justify-content: space-around;">
+      <img :src="whatsappQrUrl" />
+    </div>
   </panel>
 </template>
 
