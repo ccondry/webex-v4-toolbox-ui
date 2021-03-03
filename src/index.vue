@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters, mapState } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 import Navbar from './components/navbar'
 import Welcome from './components/welcome'
 import Provision from './components/provision'
