@@ -32,6 +32,9 @@
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
 
+        <!-- Mobile Web App -->
+        <mobile-web-app v-if="isProvisioned" />
+
         <!-- Mobile App -->
         <mobile-app v-if="isProvisioned" />
 
@@ -69,6 +72,7 @@ import Reprovision from './components/reprovision'
 import AppFooter from './components/app-footer'
 // import Debug from './components/debug'
 import Admin from './components/admin'
+import MobileWebApp from './components/mobile-web-app'
 import MobileApp from './components/mobile-app'
 import Phones from './components/phones'
 import Whatsapp from './components/whatsapp'
@@ -87,6 +91,7 @@ export default {
     AppFooter,
     // Debug,
     Admin,
+    MobileWebApp,
     MobileApp,
     Phones,
     Whatsapp,

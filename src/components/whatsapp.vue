@@ -2,8 +2,8 @@
   <!-- Whatsapp -->
   <panel title="Whatsapp" aria-id="whatsapp">
     <p>
-      Use the dCloud CC mobile app to place a call or start a chat
-      before using the Whatsapp demo.
+      Use the dCloud CC mobile app or mobile web app to place a call or start a
+      chat before using the Whatsapp demo.
       <br>
       This will put your contact info into the database for the chat bot to
       identify you on Whatsapp.
