@@ -3,6 +3,12 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.3
+
+### Features
+* **WhatsApp:** Add WhatsApp demo information.
+
+
 # 2021.3.2
 
 ### Features
