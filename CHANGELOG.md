@@ -3,6 +3,13 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.3-2
+
+### Bug Fixes
+* **Navbar:** Enable clicking through the empty navbar area between home and
+logout buttons.
+
+
 # 2021.3.3-1
 
 ### Bug Fixes
