@@ -3,6 +3,12 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.4
+
+### Features
+* **Mobile App:** Update pod ID info text.
+
+
 # 2021.3.3-4
 
 ### Features
