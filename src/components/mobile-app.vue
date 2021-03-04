@@ -4,8 +4,7 @@
       Use this information to start the dCloud CC mobile app demo.
     </p>
     <p>
-      The pod ID needs to be entered into the Settings screen in order for
-      any demo customization to take effect with the mobile chat bot.
+      The pod ID needs to be entered into the Settings screen.
     </p>
     <ul>
       <li>Session: <strong>{{ sessionId }}</strong></li>
