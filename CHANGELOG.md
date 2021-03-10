@@ -3,6 +3,13 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.10-2
+
+### Features
+* **Logout:** Show loading/working status and disable the logout button while
+logging out.
+
+
 # 2021.3.10-1
 
 ### Features
