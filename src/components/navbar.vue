@@ -39,6 +39,7 @@
           aria-label="Log Out"
           style="pointer-events: initial;"
           @click="clickLogout"
+          :disabled="isWorking"
           >
             Log Out
           </b-button>
@@ -56,7 +57,10 @@ export default {
     ...mapGetters([
       'isAdminSu',
       'isAdmin'
-    ])
+    ]),
+    isWorking () {
+      return this.working.user.logout
+    }
   },
   
   methods: {

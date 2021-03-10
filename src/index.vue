@@ -117,7 +117,8 @@ export default {
       this.loading.user.details
     },
     isWorking () {
-      return this.working.user.provision
+      return this.working.user.provision ||
+      this.working.user.logout
     }
   },
 
