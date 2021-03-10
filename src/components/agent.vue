@@ -52,7 +52,7 @@
       </p>
 
       <p
-      v-if="agent.role === 'Agent'"
+      v-if="['Agent', 'Supervisor'].includes(agent.role)"
       style="white-space: nowrap;"
       >
         <strong>
@@ -65,7 +65,7 @@
       </p>
 
       <p
-      v-if="agent.role === 'Administrator'"
+      v-if="['Supervisor'].includes(agent.role)"
       style="white-space: nowrap;"
       >
         <strong>
@@ -78,7 +78,7 @@
       </p>
 
       <p
-      v-if="['Supervisor', 'Administrator'].includes(agent.role)"
+      v-if="['Administrator', 'Supervisor'].includes(agent.role)"
       style="white-space: nowrap;"
       >
         <strong>
