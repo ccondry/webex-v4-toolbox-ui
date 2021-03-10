@@ -16,9 +16,9 @@ const state = {
   },
   vpnMap: {
     'RTP': 'vpn.cc1.dc-01.com',
-    'LON': 'vpn.cc1.dc-02.com',
-    'SNG': 'vpn.cc1.dc-03.com',
-    'SJC': 'vpn.cc1.dc-04.com'
+    'SNG': 'vpn.cc1.dc-02.com',
+    'LON': 'vpn.cc1.dc-03.com',
+    'SJC': 'vpn.cc1.dc-05.com'
   }
 }
 
