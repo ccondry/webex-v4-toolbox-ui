@@ -7,6 +7,23 @@
     </p>
 
     <p>
+      Add the
+      <a :href="caCertUrl" download>
+        <strong>dCloud Root CA certificate</strong>
+      </a>
+      <copy :value="caCertUrl" name="dCloud Root CA certificate URL" />
+      as a
+      <b-tooltip label="Click here for step-by-step instructions">
+        <a @click="clickInstructions">
+          <strong>trusted root CA on your laptop</strong>
+        </a>
+        <!-- <b-icon icon="help-circle" type="is-primary" size="is-small" /> -->
+      </b-tooltip>
+      to remove the certificate warning when
+      you attempt to connect to the RDP workstation.
+    </p>
+
+    <p>
       Remote Desktop Workstation:
       <strong>{{ rdpAddress }}</strong>
       <copy :value="rdpFqdn" name="Workstation RDP Address" />
@@ -39,12 +56,26 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import CaInstallationModal from './ca-installation-modal'
+
 export default {
   computed: {
     ...mapGetters([
       'rdpAddress',
-      'rdpFqdn'
+      'rdpFqdn',
+      'caCertUrl'
     ])
+  },
+  
+  methods: {
+    clickInstructions () {
+      this.$buefy.modal.open({
+        parent: this,
+        component: CaInstallationModal,
+        hasModalCard: true,
+        trapFocus: true
+      })
+    }
   }
 }
 </script>

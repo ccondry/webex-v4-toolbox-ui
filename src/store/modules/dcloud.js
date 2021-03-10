@@ -36,6 +36,7 @@ const mutations = {
 }
 
 const getters = {
+  caCertUrl: () => 'https://mm-static.cxdemo.net/dcloud-root-ca.crt',
   datacenter: state => state.instance.datacenter,
   sessionId: state => state.instance.id,
   datacenterDisplayName: (state, getters) => {
