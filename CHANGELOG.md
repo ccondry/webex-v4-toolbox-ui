@@ -3,6 +3,12 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.10-3
+
+### Bug Fixes
+* **VPN:** Fix VPN address display for datacenters other than RTP.
+
+
 # 2021.3.10-2
 
 ### Features
