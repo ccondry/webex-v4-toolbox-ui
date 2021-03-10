@@ -27,8 +27,8 @@
           type="is-info"
           rounded
           aria-label="Admin"
-          @click="clickAdmin"
           style="pointer-events: initial;"
+          @click="clickAdmin"
           >
             Admin
           </b-button>
@@ -37,8 +37,8 @@
           type="is-info"
           rounded
           aria-label="Log Out"
-          @click="clickLogout"
           style="pointer-events: initial;"
+          @click="clickLogout"
           >
             Log Out
           </b-button>

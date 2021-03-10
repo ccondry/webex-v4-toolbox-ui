@@ -17,7 +17,7 @@
       or scan this QR code to do it automatically:
     </p>
     <div style="display: flex; justify-content: space-around;">
-      <img :src="whatsappQrUrl" />
+      <img :src="whatsappQrUrl">
     </div>
   </panel>
 </template>
