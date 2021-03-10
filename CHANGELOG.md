@@ -3,6 +3,14 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.10
+
+### Features
+* **Workstation:** Add dCloud CA Certificate link and installation instructions
+for Windows and Mac, to remove the certificate warning when connecting to the
+workstation.
+
+
 # 2021.3.4
 
 ### Features
