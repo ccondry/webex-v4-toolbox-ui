@@ -44,7 +44,7 @@ export default {
     rick () {
       return {
         picture: this.imageFolder + '/rick.png',
-        rdpUsername: 'sjeffers' + this.jwtUser.id,
+        rdpUsername: 'rbarrows' + this.jwtUser.id,
         username: 'rbarrows' + this.jwtUser.id + '@' + this.loginDomain,
         password: 'C1sco12345',
         extension: '82' + this.jwtUser.id,
