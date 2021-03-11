@@ -56,7 +56,8 @@ export default {
   computed: {
     ...mapGetters([
       'isAdminSu',
-      'isAdmin'
+      'isAdmin',
+      'working'
     ]),
     isWorking () {
       return this.working.user.logout
