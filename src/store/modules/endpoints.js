@@ -24,6 +24,7 @@ const getters = {
       userDemoConfig: authUrlBase + '/user/demo',
       user: authUrlBase + '/user',
       session: mmUrlBase + '/sessions',
+      instance: mmUrlBase + '/instance'
     }
   },
   defaultRestOptions: (state, getters) => {

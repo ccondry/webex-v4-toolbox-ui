@@ -31,14 +31,29 @@ const mutations = {
   // },
   [types.SET_INSTANCE] (state, data) {
     console.log('SET_INSTANCE', data)
-    state.instance = data
+    state.instance = data[0]
   }
 }
 
 const getters = {
+  urlDatacenter: (state, getters) => {
+    // return the datacenter according to the browser URL
+    if (getters.isProduction) {
+      // get current hostname of the browser location
+      const hostname = window.location.hostname
+      // get the subdomain
+      const subdomain = hostname.split('.').shift()
+      // get the datacenter part
+      const datacenter = subdomain.split('-').pop().toUpperCase()
+      return datacenter
+    } else {
+      // use RTP when in development
+      return 'RTP'
+    }
+  },
   caCertUrl: () => 'https://mm-static.cxdemo.net/dcloud-root-ca.crt',
   datacenter: state => state.instance.datacenter,
-  sessionId: state => state.instance.id,
+  sessionId: state => state.instance.session,
   datacenterDisplayName: (state, getters) => {
     return state.datacenterNames[getters.datacenter]
   },
@@ -113,20 +128,21 @@ const actions = {
       message: 'get verticals list'
     })
   },
-  getInstance ({dispatch, getters}) {
+  async getInstance ({dispatch, getters}) {
     // get instant demo instance information, for the session ID and datacenter
     dispatch('fetch', {
       group: 'dcloud',
       type: 'instance',
-      url: getters.endpoints.session,
+      url: getters.endpoints.instance,
       options: {
         query: {
-          datacenter: 'webex',
-          session: 'v4prod'
+          datacenter: getters.urlDatacenter,
+          demo: 'webex',
+          version: 'v4prod'
         }
       },
       mutation: types.SET_INSTANCE,
-      message: 'get dCloud session information'
+      message: 'get dCloud session/instance information'
     })
   },
 }
