@@ -6,9 +6,19 @@
       another dCloud datacenter or a newer version of this demo (if one is
       available).
     </p>
+    <!-- was there a provision error? -->
+    <b-message v-if="!isLocked && userDemoConfig.provision === 'error'"
+    title="Error"
+    type="is-danger"
+    aria-close-label="Close message"
+    >
+      {{ userDemoConfig.error }}
+    </b-message>
+    <!-- normal provision message -->
     <p v-if="!isLocked">
       Would you like to provision your account?
     </p>
+    <!-- the provision button -->
     <b-field v-if="!isLocked">
       <b-button
       :disabled="working.user.provision"
@@ -30,7 +40,8 @@ export default {
   computed: {
     ...mapGetters([
       'working',
-      'isLocked'
+      'isLocked',
+      'userDemoConfig'
     ]),
     buttonText () {
       if (this.working.user.provision) {
