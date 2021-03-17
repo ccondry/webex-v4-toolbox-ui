@@ -3,6 +3,16 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+# 2021.3.17
+
+### Features
+* **Provision:** Show provision error messages to user.
+
+### Bug Fixes
+* **dCloud Session:** Fix session ID and datacenter information sometimes not
+displaying in datacenters other than RTP.
+
+
 # 2021.3.10-3
 
 ### Bug Fixes
