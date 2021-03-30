@@ -3,6 +3,13 @@
 Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
+
+# 2021.3.30-1
+
+### Bug Fixes
+* **Mobile App:** Add note about the mobile app not supporting SMS feature yet.
+
+
 # 2021.3.30
 
 ### Bug Fixes
