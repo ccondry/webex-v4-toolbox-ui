@@ -38,9 +38,6 @@
         <!-- Mobile App -->
         <mobile-app v-if="isProvisioned" />
 
-        <!-- WhatsApp -->
-        <whatsapp v-if="isProvisioned" />
-
         <!-- Phones -->
         <phones v-if="isProvisioned" />
 
@@ -75,7 +72,6 @@ import Admin from './components/admin'
 import MobileWebApp from './components/mobile-web-app'
 import MobileApp from './components/mobile-app'
 import Phones from './components/phones'
-import Whatsapp from './components/whatsapp'
 import Workstation from './components/workstation'
 import Vpn from './components/vpn'
 
@@ -94,7 +90,6 @@ export default {
     MobileWebApp,
     MobileApp,
     Phones,
-    Whatsapp,
     Workstation,
     Vpn
   },
