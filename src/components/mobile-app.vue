@@ -6,6 +6,10 @@
     <p>
       The pod ID needs to be entered into the Settings screen.
     </p>
+    <p>
+      Please note that the SMS is not able to route to Webex CC agents yet, so
+      please do not use that feature for this demo.
+    </p>
     <ul>
       <li>Session: <strong>{{ sessionId }}</strong></li>
       <li>Datacenter: <strong>{{ datacenterDisplayName }}</strong></li>
