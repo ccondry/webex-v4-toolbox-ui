@@ -56,7 +56,7 @@ export default {
     admin () {
       return {
         picture: this.imageFolder + '/helen.png',
-        username: 'dcloudwxcc@gmail.com',
+        username: 'dcloudcwcc@gmail.com',
         password: 'C1sco12345!',
         name: 'Administrator',
         role: 'Administrator',
