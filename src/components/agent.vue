@@ -65,7 +65,7 @@
       </p>
 
       <p
-      v-if="['Supervisor'].includes(agent.role)"
+      v-if="['Supervisor', 'Administrator'].includes(agent.role)"
       style="white-space: nowrap;"
       >
         <strong>
