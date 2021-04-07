@@ -65,19 +65,6 @@
       </p>
 
       <p
-      v-if="['Supervisor', 'Administrator'].includes(agent.role)"
-      style="white-space: nowrap;"
-      >
-        <strong>
-          Management Portal:
-          <a :href="cjpAdminPortalUrl" target="_blank">
-            {{ cjpAdminPortalUrl }}
-          </a>
-        </strong>
-        <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />
-      </p>
-
-      <p
       v-if="['Administrator'].includes(agent.role)"
       style="white-space: nowrap;"
       >
@@ -88,6 +75,19 @@
           </a>
         </strong>
         <copy :value="webexAdminPortalUrl" name="Control Hub URL" />
+      </p>
+
+      <p
+      v-if="['Supervisor', 'Administrator'].includes(agent.role)"
+      style="white-space: nowrap;"
+      >
+        <strong>
+          Management Portal:
+          <a :href="cjpAdminPortalUrl" target="_blank">
+            {{ cjpAdminPortalUrl }}
+          </a>
+        </strong>
+        <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />
       </p>
     </article>
   </div>
