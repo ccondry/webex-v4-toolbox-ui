@@ -102,12 +102,14 @@ const actions = {
       }
     } catch (e) {
       console.error(`${message} failed: ${e.message}`)
-      Toast.open({
-        message: `Failed to ${message}: ${e.message}`,
-        type: 'is-danger',
-        duration: 6 * 1000,
-        queue: false
-      })
+      if (showNotification) {
+        Toast.open({
+          message: `Failed to ${message}: ${e.message}`,
+          type: 'is-danger',
+          duration: 6 * 1000,
+          queue: false
+        })
+      }
     } finally {
       dispatch(loadingOrWorking, {group, type, value: false})
     }
