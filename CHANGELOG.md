@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.4.8-1
+
+### Bug Fixes
+* **Agents:** Add domain part of the RDP username.
+
+
 # 2021.4.8
 
 ### Features
