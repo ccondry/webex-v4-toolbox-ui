@@ -92,7 +92,11 @@ const getters = {
   },
   // the VPN address
   vpnAddress: (state, getters) => {
-    return state.vpnMap[getters.datacenter]
+    try {
+      return state.vpnMap[getters.datacenter] || ''
+    } catch (e) {
+      return ''
+    }
   }
 }
 

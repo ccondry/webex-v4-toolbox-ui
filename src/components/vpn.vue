@@ -11,8 +11,8 @@
       </li>
       <li>
         Username:
-        <strong>{{ userDemoConfig.vpnUsername }}</strong>
-        <copy :value="userDemoConfig.vpnUsername" name="VPN Username" />
+        <strong>{{ vpnUsername }}</strong>
+        <copy :value="vpnUsername" name="VPN Username" />
       </li>
       <li>
         Password:
@@ -44,7 +44,14 @@ export default {
     ...mapGetters([
       'vpnAddress',
       'userDemoConfig'
-    ])
+    ]),
+    vpnUsername () {
+      try {
+        return this.userDemoConfig.vpnUsername || ''
+      } catch (e) {
+        return ''
+      }
+    }
   },
 
   methods: {
