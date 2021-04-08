@@ -17,3 +17,8 @@ export const SET_USER = 'SET_USER'
 export const SET_VERTICALS = 'SET_VERTICALS'
 // dcloud session ID and datacenter
 export const SET_INSTANCE = 'SET_DCLOUD_SESSION'
+
+// user agent desktop layout
+export const SET_DESKTOP_LAYOUT = 'SET_DESKTOP_LAYOUT'
+// global agent desktop layout
+export const SET_GLOBAL_DESKTOP_LAYOUT = 'SET_GLOBAL_DESKTOP_LAYOUT'

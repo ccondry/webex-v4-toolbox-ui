@@ -38,6 +38,9 @@
         <!-- Mobile App -->
         <mobile-app v-if="isProvisioned" />
 
+        <!-- Agent Desktop Layout -->
+        <desktop-layout v-if="isProvisioned" />
+
         <!-- Laptop Demo -->
         <laptop-demo v-if="isProvisioned" />
 
@@ -74,6 +77,7 @@ import MobileApp from './components/mobile-app'
 import LaptopDemo from './components/laptop-demo'
 import Workstation from './components/workstation'
 import Vpn from './components/vpn'
+import DesktopLayout from './components/desktop-layout'
 
 export default {
   components: {
@@ -91,7 +95,8 @@ export default {
     MobileApp,
     LaptopDemo,
     Workstation,
-    Vpn
+    Vpn,
+    DesktopLayout
   },
 
   computed: {

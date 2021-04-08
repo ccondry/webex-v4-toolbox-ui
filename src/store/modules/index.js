@@ -5,6 +5,7 @@ import defaults from './defaults'
 import endpoints from './endpoints'
 import user from './user'
 import webex from './webex'
+import layout from './layout'
 import fetch from './fetch'
 
 export default {
@@ -15,5 +16,6 @@ export default {
   endpoints,
   user,
   webex,
+  layout,
   fetch
 }

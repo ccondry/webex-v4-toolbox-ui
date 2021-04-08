@@ -24,7 +24,9 @@ const getters = {
       userDemoConfig: authUrlBase + '/user/demo',
       user: authUrlBase + '/user',
       session: mmUrlBase + '/sessions',
-      instance: mmUrlBase + '/instance'
+      instance: mmUrlBase + '/instance',
+      layout: authUrlBase + '/webex-v4/cjp/layout',
+      globalLayout: authUrlBase + '/webex-v4/cjp/global-layout'
     }
   },
   defaultRestOptions: (state, getters) => {

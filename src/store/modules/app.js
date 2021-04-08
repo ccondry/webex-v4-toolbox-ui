@@ -9,14 +9,16 @@ const state = {
     user: {},
     users: {},
     ldap: {},
-    dcloud: {}
+    dcloud: {},
+    webex: {}
   },
   working: {
     app: {},
     user: {},
     users: {},
     ldap: {},
-    dcloud: {}
+    dcloud: {},
+    webex: {}
   },
   isProduction: process.env.NODE_ENV === 'production',
   demoEnvironment: {},
