@@ -32,7 +32,7 @@ export default {
     sandra () {
       return {
         picture: this.imageFolder + '/sandra.png',
-        rdpUsername: 'sjeffers' + this.jwtUser.id,
+        rdpUsername: 'dcloud\\sjeffers' + this.jwtUser.id,
         username: 'sjeffers' + this.jwtUser.id + '@' + this.loginDomain,
         password: 'C1sco12345',
         extension: '80' + this.jwtUser.id,
@@ -44,7 +44,7 @@ export default {
     rick () {
       return {
         picture: this.imageFolder + '/rick.png',
-        rdpUsername: 'rbarrows' + this.jwtUser.id,
+        rdpUsername: 'dcloud\\rbarrows' + this.jwtUser.id,
         username: 'rbarrows' + this.jwtUser.id + '@' + this.loginDomain,
         password: 'C1sco12345',
         extension: '82' + this.jwtUser.id,
