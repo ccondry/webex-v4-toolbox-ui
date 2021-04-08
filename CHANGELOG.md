@@ -4,6 +4,14 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.4.8
+
+### Features
+* **Agent Desktop:** Add Agent Desktop panel to download global default agent
+desktop layout, download current user desktop layout, and upload new desktop
+layout to replace the user's current one.
+
+
 # 2021.4.7
 
 ### Features
