@@ -38,8 +38,8 @@
         <!-- Mobile App -->
         <mobile-app v-if="isProvisioned" />
 
-        <!-- Phones -->
-        <phones v-if="isProvisioned" />
+        <!-- Laptop Demo -->
+        <laptop-demo v-if="isProvisioned" />
 
         <!-- Reprovision -->
         <reprovision v-if="isProvisioned" />
@@ -71,7 +71,7 @@ import AppFooter from './components/app-footer'
 import Admin from './components/admin'
 import MobileWebApp from './components/mobile-web-app'
 import MobileApp from './components/mobile-app'
-import Phones from './components/phones'
+import LaptopDemo from './components/laptop-demo'
 import Workstation from './components/workstation'
 import Vpn from './components/vpn'
 
@@ -89,7 +89,7 @@ export default {
     Admin,
     MobileWebApp,
     MobileApp,
-    Phones,
+    LaptopDemo,
     Workstation,
     Vpn
   },

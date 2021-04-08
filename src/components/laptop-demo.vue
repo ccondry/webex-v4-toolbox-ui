@@ -1,5 +1,5 @@
 <template>
-  <panel title="Laptop Demo" aria-id="phones">
+  <panel title="Laptop Demo" aria-id="laptop-demo">
     <div>
       <p>
         If you don't want to use the RDP workstation, you can connect your
