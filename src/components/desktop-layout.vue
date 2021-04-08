@@ -7,7 +7,7 @@
     <div style="position: relative;">
       <b-loading :is-full-page="false" :active="isLoading || isWorking" />
       <!-- download current -->
-      <b-field>
+      <b-field v-if="globalDesktopLayout">
         <b-button
         tag="a"
         :download="globalDesktopLayout.attributes.jsonFileName__s"
@@ -24,7 +24,7 @@
       </b-field>
 
       <!-- download current -->
-      <b-field>
+      <b-field v-if="desktopLayout">
         <b-button
         tag="a"
         :download="desktopLayout.attributes.jsonFileName__s"
