@@ -5,7 +5,7 @@
       <strong>Webex Contact Center v4</strong>
       Instant Demo Toolbox!
       <br>
-      Join our Webex Teams support room to get help, ask questions, and
+      Join our Webex support space to get help, ask questions, and
       suggest new features:
     </p>
     <b-field>
@@ -15,7 +15,7 @@
       expanded
       @click="clickJoinSupportRoom"
       >
-        Join Support Room
+        Join Support Space
       </b-button>
     </b-field>
   </panel>
@@ -36,14 +36,14 @@ export default {
     ]),
     clickJoinSupportRoom () {
       this.$buefy.dialog.prompt({
-        title: 'Join Webex Teams Support Room',
-        message: `What email address do you use for Webex Teams?`,
+        title: 'Join Webex Support Space',
+        message: `What email address do you use for Webex?`,
         rounded: true,
         confirmText: 'Submit',
         type: 'is-success',
         inputAttrs: {
           value: this.jwtUser.email,
-          placeholder: 'Your Webex Teams Email Address'
+          placeholder: 'Your Webex Email Address'
         },
         onConfirm: (email) => {
           this.joinSupportRoom(email)
