@@ -104,13 +104,6 @@ export default {
     }
   },
 
-  mounted () {
-    // set tab to Mac instructions if user is browsing on a Mac
-    if (this.os === 'Mac') {
-      this.activeTab = 1
-    }
-  },
-
   computed: {
     ...mapGetters([
       'caCertUrl'
@@ -135,6 +128,13 @@ export default {
     },
     userAgent () {
       return navigator.userAgent 
+    }
+  },
+  
+  mounted () {
+    // set tab to Mac instructions if user is browsing on a Mac
+    if (this.os === 'Mac') {
+      this.activeTab = 1
     }
   }
 }

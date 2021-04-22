@@ -34,12 +34,12 @@
           </b-button>
 
           <b-button
+          :disabled="isWorking"
           type="is-info"
           rounded
           aria-label="Log Out"
           style="pointer-events: initial;"
           @click="clickLogout"
-          :disabled="isWorking"
           >
             Log Out
           </b-button>
