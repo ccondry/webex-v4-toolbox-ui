@@ -23,11 +23,8 @@
         <!-- Demo Website -->
         <demo-website v-if="isProvisioned" />
 
-        <!-- VPN -->
-        <vpn v-if="isProvisioned" />
-
-        <!-- Workstation -->
-        <workstation v-if="isProvisioned" />
+        <!-- VPN and Workstation connection -->
+        <connect v-if="isProvisioned" />
 
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
@@ -75,8 +72,7 @@ import Admin from './components/admin'
 import MobileWebApp from './components/mobile-web-app'
 import MobileApp from './components/mobile-app'
 import LaptopDemo from './components/laptop-demo'
-import Workstation from './components/workstation'
-import Vpn from './components/vpn'
+import Connect from './components/connect'
 import DesktopLayout from './components/desktop-layout'
 
 export default {
@@ -94,8 +90,7 @@ export default {
     MobileWebApp,
     MobileApp,
     LaptopDemo,
-    Workstation,
-    Vpn,
+    Connect,
     DesktopLayout
   },
 
