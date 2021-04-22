@@ -29,10 +29,7 @@
         <!-- Agents and Supervisors -->
         <agents v-if="isProvisioned" />
 
-        <!-- Mobile Web App -->
-        <mobile-web-app v-if="isProvisioned" />
-
-        <!-- Mobile App -->
+        <!-- Mobile App and Mobile Web App-->
         <mobile-app v-if="isProvisioned" />
 
         <!-- Agent Desktop Layout -->
@@ -69,7 +66,6 @@ import Reprovision from './components/reprovision'
 import AppFooter from './components/app-footer'
 // import Debug from './components/debug'
 import Admin from './components/admin'
-import MobileWebApp from './components/mobile-web-app'
 import MobileApp from './components/mobile-app'
 import LaptopDemo from './components/laptop-demo'
 import Connect from './components/connect'
@@ -87,7 +83,6 @@ export default {
     AppFooter,
     // Debug,
     Admin,
-    MobileWebApp,
     MobileApp,
     LaptopDemo,
     Connect,

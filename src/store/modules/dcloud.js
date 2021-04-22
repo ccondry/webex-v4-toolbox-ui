@@ -36,6 +36,16 @@ const mutations = {
 }
 
 const getters = {
+  mobileWebAppUrl: (state, getters) => {
+    const url = 'https://mc.cxdemo.net/'
+    const query = {
+      datacenter: getters.datacenter,
+      sessionId: getters.sessionId,
+      userId: getters.jwtUser.id,
+      username: getters.jwtUser.firstName + ' ' + getters.jwtUser.lastName
+    }
+    return addUrlQueryParams(url, query)
+  },
   urlDatacenter: (state, getters) => {
     // return the datacenter according to the browser URL
     if (getters.isProduction) {
