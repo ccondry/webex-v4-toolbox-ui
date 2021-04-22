@@ -4,6 +4,17 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.4.22
+
+### Features
+* **Desktop Layout:** Add an upload button to replace the current desktop layout
+logo image.
+* **Agent Connection:** Combine VPN and Workstation panels into horizontal
+tiles in one panel.
+* **Mobile App:** Combine Mobile App and Mobile Web App panels into horizontal
+tiles in one panel.
+
+
 # 2021.4.19
 
 ### Features
