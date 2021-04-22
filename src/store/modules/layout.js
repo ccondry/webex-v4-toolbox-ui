@@ -21,9 +21,12 @@ const getters = {
 
 const actions = {
   async getDesktopLayout ({dispatch, getters}) {
+    const group = 'webex'
+    const type = 'desktopLayout'
+    if (!getters.loading[group][type])
     return dispatch('fetch', {
-      group: 'webex',
-      type: 'desktopLayout',
+      group,
+      type,
       url: getters.endpoints.layout,
       showNotification: false,
       message: 'get agent desktop layout',
@@ -41,6 +44,7 @@ const actions = {
     })
   },
   async updateDesktopLayout ({dispatch, getters}, body) {
+    // update the user desktop layout JSON
     console.log('updateDesktopLayout', body)
     const response = await dispatch('fetch', {
       group: 'webex',
@@ -55,10 +59,45 @@ const actions = {
     })
     if (response instanceof Error) {
       // 
-    } else{
-      dispatch('getDesktopLayout')
+    } else {
+      // get updated user desktop layout from server
+      await dispatch('getDesktopLayout')
     }
   },
+  async uploadLogoImage ({dispatch, getters}, {name, data}) {
+    // console.log('upload desktop layout image')
+    const response = await dispatch('fetch', {
+      group: 'webex',
+      type: 'desktopLayout',
+      url: getters.endpoints.image,
+      showNotification: true,
+      message: 'Upload logo image',
+      options: {
+        method: 'POST',
+        body: {
+          name,
+          node: "logo",
+          vertical: "webex-v4",
+          data
+        }
+      }
+    })
+    if (response instanceof Error) {
+      // 
+      console.log('uploadLogoImage error:', response)
+    } else {
+      console.log('response', response)
+      // get the current layout, whether user or global
+      const currentLayout = getters.desktopLayout || getters.globalDesktopLayout
+      // create a copy of the layout
+      const layoutCopy = JSON.parse(JSON.stringify(currentLayout))
+      // set the logo image URL
+      layoutCopy.logo = response.url
+      // update user layout
+      await dispatch('updateDesktopLayout', layoutCopy)
+      // dispatch('getDesktopLayout')
+    }
+  }
 }
 
 module.exports = {
