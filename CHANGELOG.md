@@ -4,6 +4,14 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.4.27
+
+### Features
+* **Mobile App:** Remove Mobile App panel, leaving just the Mobile Web App
+information. Update the QR code to use permanent v4 datacenter and session ID
+strings instead of dCloud session info.
+
+
 # 2021.4.22
 
 ### Features
