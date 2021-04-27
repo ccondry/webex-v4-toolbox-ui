@@ -39,8 +39,8 @@ const getters = {
   mobileWebAppUrl: (state, getters) => {
     const url = 'https://mc.cxdemo.net/'
     const query = {
-      datacenter: getters.datacenter,
-      sessionId: getters.sessionId,
+      datacenter: 'webex',
+      sessionId: 'v4prod',
       userId: getters.jwtUser.id,
       username: getters.jwtUser.firstName + ' ' + getters.jwtUser.lastName
     }
