@@ -4,6 +4,13 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.6
+
+### Features
+* **VPN:** Add note about installing only the Core & VPN part of VPN client
+on Windows.
+
+
 # 2021.5.3
 
 ### Features
