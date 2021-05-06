@@ -49,6 +49,7 @@
       <ul>
         <li>
           <a :href="links.windows" download>AnyConnect 4.10 for Windows</a>
+          (Only the <strong>Core &amp; VPN</strong> component is necessary)
         </li>
         <li>
           <a :href="links.mac" download>AnyConnect 4.10 for Mac</a>
