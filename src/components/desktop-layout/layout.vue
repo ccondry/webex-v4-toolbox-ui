@@ -23,7 +23,7 @@
         <b-field v-if="globalDesktopLayout">
           <b-button
           tag="a"
-          :download="globalDesktopLayout.attributes.jsonFileName__s"
+          :download="globalDesktopLayout"
           rounded
           type="is-primary"
           expanded
@@ -32,7 +32,6 @@
           >
             <!-- Download Default Layout -->
             Download the Default Layout
-            <!-- {{ globalDesktopLayout.attributes.jsonFileName__s }} -->
           </b-button>
         </b-field>
 
@@ -40,7 +39,7 @@
         <b-field v-if="desktopLayout">
           <b-button
           tag="a"
-          :download="desktopLayout.attributes.jsonFileName__s"
+          :download="desktopLayout"
           rounded
           type="is-primary"
           expanded
@@ -48,7 +47,6 @@
           icon-left="download"
           >
             Download Your Layout
-            <!-- {{ desktopLayout.attributes.jsonFileName__s }} -->
           </b-button>
         </b-field>
 
