@@ -4,6 +4,13 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.12-1
+
+### Fixes
+* **Layout:** Fix references to desktop layout JSON, causing the buttons to not
+finish loading.
+
+
 # 2021.5.12
 
 ### Fixes
