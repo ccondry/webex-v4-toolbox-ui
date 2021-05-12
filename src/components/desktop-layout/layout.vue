@@ -32,6 +32,7 @@
           >
             <!-- Download Default Layout -->
             Download the Default Layout
+            <!-- {{ globalDesktopLayout.attributes.jsonFileName__s }} -->
           </b-button>
         </b-field>
 
@@ -47,6 +48,7 @@
           icon-left="download"
           >
             Download Your Layout
+            <!-- {{ desktopLayout.attributes.jsonFileName__s }} -->
           </b-button>
         </b-field>
 
