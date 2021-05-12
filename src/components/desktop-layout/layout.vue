@@ -23,7 +23,7 @@
         <b-field v-if="globalDesktopLayout">
           <b-button
           tag="a"
-          :download="globalDesktopLayout"
+          download="Global_Layout.json"
           rounded
           type="is-primary"
           expanded
@@ -39,7 +39,7 @@
         <b-field v-if="desktopLayout">
           <b-button
           tag="a"
-          :download="desktopLayout"
+          :download="`User_${user.id}.json`"
           rounded
           type="is-primary"
           expanded
@@ -82,7 +82,8 @@ export default {
       'loading',
       'working',
       'desktopLayout',
-      'globalDesktopLayout'
+      'globalDesktopLayout',
+      'user'
     ]),
     isLoading () {
       return this.loading.webex.desktopLayout
