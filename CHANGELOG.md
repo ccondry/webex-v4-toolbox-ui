@@ -4,6 +4,13 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.12-2
+
+### Fixes
+* **Layout:** Fix filenames of desktop layout downloaded files, and update the
+format to have 2 space indentation and newlines.
+
+
 # 2021.5.12-1
 
 ### Fixes
