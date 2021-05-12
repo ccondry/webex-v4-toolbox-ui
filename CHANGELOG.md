@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.12
+
+### Fixes
+* **Layout:** Update desktop layout format from server to fix logo upload.
+
+
 # 2021.5.6
 
 ### Features
