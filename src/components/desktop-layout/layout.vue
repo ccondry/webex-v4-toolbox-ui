@@ -93,10 +93,10 @@ export default {
       return this.working.webex.desktopLayout
     },
     fileData () {
-      return this.generateFileData(this.desktopLayout.attributes.jsonFileContent__s)
+      return this.generateFileData(this.desktopLayout)
     },
     globalDesktopLayoutFileData () {
-      return this.generateFileData(this.globalDesktopLayout.attributes.jsonFileContent__s)
+      return this.generateFileData(this.globalDesktopLayout)
     }
   },
 
