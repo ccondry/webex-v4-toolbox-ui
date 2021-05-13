@@ -5,7 +5,10 @@
       <layout />
       
       <!-- Logo Image -->
-      <logo />
+      <div>
+        <logo />
+        <layout-title />
+      </div>
     </div>
   </panel>
 </template>
@@ -13,11 +16,13 @@
 <script>
 import Layout from './layout'
 import Logo from './logo'
+import LayoutTitle from './title'
 
 export default {
   components: {
     Layout,
-    Logo
+    Logo,
+    LayoutTitle
   }
 }
 </script>

@@ -15,7 +15,7 @@
       </p>
 
       <upload
-      :working="isWorking"
+      :working="isWorking || isLoading"
       @upload="upload"
       >
         Upload Logo Image
