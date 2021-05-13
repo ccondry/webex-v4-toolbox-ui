@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.13
+
+### Fixes
+* **Layout:** Ddd panel to set the app title.
+
+
 # 2021.5.12-2
 
 ### Fixes
