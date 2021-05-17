@@ -3,7 +3,7 @@ import {ToastProgrammatic as Toast} from 'buefy/src'
 const state = {
   agentPortalUrl: 'https://desktop.wxcc-us1.cisco.com',
   webexAdminPortalUrl: 'https://admin.webex.com/overview',
-  cjpAdminPortalUrl: 'https://portal.wxcc-us1.cisco.com'
+  cjpAdminPortalUrl: 'https://portal.wxcc-us1.cisco.com/portal/customer-nav?__tid=166&ciClusterId=PF84'
 }
 
 const getters = {
