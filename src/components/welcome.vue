@@ -14,8 +14,9 @@
       rounded
       expanded
       @click="clickJoinSupportRoom"
+      :disabled="isWorking"
       >
-        Join Support Space
+        {{ isWorking ? 'Working...' : 'Join Support Space' }}
       </b-button>
     </b-field>
   </panel>
@@ -23,11 +24,16 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+
 export default {
   computed: {
     ...mapGetters([
-      'jwtUser'
-    ])
+      'jwtUser',
+      'working'
+    ]),
+    isWorking () {
+      return this.working.webex.joinSupportRoom
+    }
   },
 
   methods: {
