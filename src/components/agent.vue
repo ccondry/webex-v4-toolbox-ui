@@ -4,14 +4,17 @@
     class="tile is-child box"
     style="border: 1px solid rgb(204, 204, 204);"
     >
+      <!-- name -->
       <p class="title" style="white-space:nowrap">
         {{ agent.name }}
       </p>
 
+      <!-- description -->
       <p class="subtitle">
         {{ agent.description }}
       </p>
 
+      <!-- picture -->
       <img :src="agent.picture" style="width: 128px; height: 128px;">
 
       <!-- multiple webex usernames -->
@@ -43,6 +46,7 @@
         <copy :value="agent.username" name="Webex Username" />
       </p>
       
+      <!-- rdp username -->
       <p
       v-if="['Agent', 'Supervisor'].includes(agent.role)"
       style="white-space: nowrap;"
@@ -54,6 +58,7 @@
         <copy :value="agent.rdpUsername" name="RDP Username" />
       </p>
 
+      <!-- password -->
       <p>
         <strong>
           Password:
@@ -62,6 +67,7 @@
         <copy :value="agent.password" name="Password" />
       </p>
       
+      <!-- extension -->
       <p
       v-if="['Agent', 'Supervisor'].includes(agent.role)"
       >
@@ -72,6 +78,7 @@
         <copy :value="agent.extension" name="Extension" />
       </p>
 
+      <!-- agent desktop URL -->
       <p
       v-if="['Agent', 'Supervisor'].includes(agent.role)"
       style="white-space: nowrap;"
@@ -85,6 +92,7 @@
         <copy :value="agentPortalUrl" name="Agent Desktop URL" />
       </p>
 
+      <!-- control hub URL -->
       <p
       v-if="['Administrator'].includes(agent.role)"
       style="white-space: nowrap;"
@@ -98,6 +106,7 @@
         <copy :value="webexAdminPortalUrl" name="Control Hub URL" />
       </p>
 
+      <!-- mangement portal URL -->
       <p
       v-if="['Supervisor', 'Administrator'].includes(agent.role)"
       style="white-space: nowrap; "
