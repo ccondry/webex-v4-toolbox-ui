@@ -100,12 +100,21 @@
 
       <p
       v-if="['Supervisor', 'Administrator'].includes(agent.role)"
-      style="white-space: nowrap;"
+      style="white-space: nowrap; "
       >
-        <strong>
+        <strong
+        style="display: inline-block"
+        >
           Management Portal:
-          <a :href="cjpAdminPortalUrl" target="_blank">
+          <a
+          :href="cjpAdminPortalUrl"
+          target="_blank"
+          >
+          <span
+          style="display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 24rem; vertical-align: top;"
+          >
             {{ cjpAdminPortalUrl }}
+          </span>
           </a>
         </strong>
         <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />
