@@ -4,6 +4,15 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.21
+
+### Features
+* **Agents:** Add extra usernames for Management Portal.
+
+### Fixes
+* **Agents:** Hide the end of the long the Management Portal URL with ellipsis.
+
+
 # 2021.5.18
 
 ### Fixes
