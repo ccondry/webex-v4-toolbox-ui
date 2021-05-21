@@ -14,7 +14,28 @@
 
       <img :src="agent.picture" style="width: 128px; height: 128px;">
 
-      <p style="white-space: nowrap;">
+      <!-- multiple webex usernames -->
+      <p
+      v-if="Array.isArray(agent.username)"
+      >
+        <span
+        v-for="(username, key) of agent.username"
+        :key="key"
+        style="white-space: nowrap; display: block;"
+        >
+          <strong>
+            Webex Username:
+            {{ username }}
+          </strong>
+          <copy :value="username" name="Webex Username" />
+        </span>
+      </p>
+
+      <!-- single webex username -->
+      <p
+      v-else
+      style="white-space: nowrap;"
+      >
         <strong>
           Webex Username:
           {{ agent.username }}
