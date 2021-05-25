@@ -57,7 +57,8 @@
         If you have any issues connecting to
         the Workstation using the FQDN, then try using the
         IP address instead.
-        <br>
+      </p>
+      <p>
         If you are on Windows, you may need to try rebooting to
         resolve any AnyConnect-related DNS issue.
       </p>
