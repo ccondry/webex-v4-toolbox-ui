@@ -119,11 +119,11 @@
           :href="cjpAdminPortalUrl"
           target="_blank"
           >
-          <span
-          style="display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 24rem; vertical-align: top;"
-          >
-            {{ cjpAdminPortalUrl }}
-          </span>
+            <span
+            style="display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 24rem; vertical-align: top;"
+            >
+              {{ cjpAdminPortalUrl }}
+            </span>
           </a>
         </strong>
         <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />

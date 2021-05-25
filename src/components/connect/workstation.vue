@@ -67,7 +67,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import CaInstallationModal from './ca-installation-modal'
+import CaInstallationModal from '../ca-installation-modal'
 
 export default {
   computed: {

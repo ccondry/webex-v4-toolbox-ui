@@ -6,55 +6,27 @@
     >
       <!-- title -->
       <p class="title">
-        VPN
-      </p>
-      
-      <!-- content -->
-      <p>
-        Connect your laptop to the demo session using AnyConnect:
-      </p>
-      <ul>
-        <li style="white-space:nowrap">
-          Address:
-          <strong>{{ vpnAddress }}</strong>
-          <copy :value="vpnAddress" name="VPN Address" />
-        </li>
-        <li>
-          Username:
-          <strong>{{ vpnUsername }}</strong>
-          <copy :value="vpnUsername" name="VPN Username" />
-        </li>
-        <li style="white-space:nowrap">
-          Password:
-          <strong>Your chosen demo VPN password</strong>
-        </li>
-      </ul>
-      <b-field>
-        <b-button
-        style="margin-left: 1rem;"
-        type="is-primary"
-        rounded
-        @click="clickResetPassword"
-        >
-          Reset VPN Password
-        </b-button>
-      </b-field>
-      <p>
-        Note: If you have any issues resolving DNS in the demo while using
-        Windows, try rebooting Windows to resolve this issue.
+        AnyConnect VPN
       </p>
       <p>
-        You can download the AnyConnect installer here:
+        Connect your laptop to the demo session using AnyConnect. You can
+        download the AnyConnect using these links:
       </p>
       <ul>
         <li>
           <a :href="links.windows" download>AnyConnect 4.10 for Windows</a>
+          <copy :value="links.windows" name="AnyConnect 4.10 for Windows download link" />
           (Only the <strong>Core &amp; VPN</strong> component is necessary)
         </li>
         <li>
           <a :href="links.mac" download>AnyConnect 4.10 for Mac</a>
+          <copy :value="links.mac" name="AnyConnect 4.10 for Mac download link" />
         </li>
       </ul>
+      <p>
+        Note: If you have any issues resolving DNS in the demo while using
+        Windows, try rebooting Windows to resolve it.
+      </p>
     </article>
   </div>
 </template>
@@ -68,20 +40,6 @@ export default {
       links: {
         windows: 'https://mm-static.cxdemo.net/anyconnect-win-4.10.00093-predeploy-k9.zip',
         mac: 'https://mm-static.cxdemo.net/anyconnect-macos-4.10.00093-predeploy-k9.dmg'
-      }
-    }
-  },
-
-  computed: {
-    ...mapGetters([
-      'vpnAddress',
-      'userDemoConfig'
-    ]),
-    vpnUsername () {
-      try {
-        return this.userDemoConfig.vpnUsername || ''
-      } catch (e) {
-        return ''
       }
     }
   },

@@ -13,8 +13,8 @@
       type="is-primary"
       rounded
       expanded
-      @click="clickJoinSupportRoom"
       :disabled="isWorking"
+      @click="clickJoinSupportRoom"
       >
         {{ isWorking ? 'Working...' : 'Join Support Space' }}
       </b-button>

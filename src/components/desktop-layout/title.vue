@@ -65,12 +65,20 @@ export default {
 
   watch: {
     currentLayout () {
-      this.title = this.currentLayout.appTitle
+      try {
+        this.title = this.currentLayout.appTitle
+      } catch (e) {
+        // continue
+      }
     }
   },
 
   mounted () {
-    this.title = this.currentLayout.appTitle
+    try {
+      this.title = this.currentLayout.appTitle
+    } catch (e) {
+      // continue
+    }
   },
 
   methods: {

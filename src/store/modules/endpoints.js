@@ -15,7 +15,7 @@ const getters = {
       verticalUrlBase = 'http://localhost:3033/api/v1/verticals'
 
       // use production services
-      // authUrlBase = 'https://dcloud-collab-toolbox-rtp.cxdemo.net/api/v1/auth'
+      authUrlBase = 'https://dcloud-collab-toolbox-rtp.cxdemo.net/api/v1/auth'
       verticalUrlBase = 'https://dcloud-collab-toolbox-rtp.cxdemo.net/api/v1/verticals'
     }
 
@@ -29,7 +29,7 @@ const getters = {
       userDemoConfig: authUrlBase + '/user/demo',
       user: authUrlBase + '/user',
       session: mmUrlBase + '/sessions',
-      instance: mmUrlBase + '/instance',
+      instance: authUrlBase + '/instance',
       layout: authUrlBase + '/webex-v4/cjp/layout',
       globalLayout: authUrlBase + '/webex-v4/cjp/global-layout',
       image: verticalUrlBase + '/images'
