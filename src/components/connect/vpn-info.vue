@@ -23,10 +23,6 @@
           <copy :value="links.mac" name="AnyConnect 4.10 for Mac download link" />
         </li>
       </ul>
-      <p>
-        Note: If you have any issues resolving DNS in the demo while using
-        Windows, try rebooting Windows to resolve it.
-      </p>
     </article>
   </div>
 </template>
