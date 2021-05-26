@@ -4,6 +4,13 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.5.25
+
+### Features
+* **Agent Connection:** Move AnyConnect client information to its own panel, and
+add backup VPN server connection information.
+
+
 # 2021.5.21
 
 ### Features
