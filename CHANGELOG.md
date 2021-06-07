@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.6.7
+
+### Fixes
+* **Agents:** Update managment portal URL.
+
+
 # 2021.5.25
 
 ### Features
