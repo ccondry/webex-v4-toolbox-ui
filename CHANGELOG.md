@@ -4,6 +4,13 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.6.8
+
+### Fixes
+* **Agents:** Get agent and admin links from dCloud demo base configuration
+data in the database.
+
+
 # 2021.6.7
 
 ### Fixes
