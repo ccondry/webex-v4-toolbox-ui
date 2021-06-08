@@ -149,7 +149,7 @@ export default {
     // get the Authentication REST API version
     this.getAuthApiVersion()
     // get the demo base configuration for webex-v4
-    // this.getDemoBaseConfig()
+    this.getDemoInfo()
     // get demo verticals list
     this.getVerticals()
     // get the dCloud session ID and datacenter
@@ -161,7 +161,7 @@ export default {
       'checkJwt',
       'getAuthApiVersion',
       'login',
-      // 'getDemoBaseConfig',
+      'getDemoInfo',
       'getVerticals',
       'getUser',
       'getInstance'

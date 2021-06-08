@@ -5,7 +5,7 @@ const state = {
   // list of demo verticals
   verticals: [],
   // the base configuration for this demo
-  // demoBaseConfig: {},
+  demoInfo: {},
   // dcloud session ID and datacenter information
   instance: {},
   datacenterNames: {
@@ -26,9 +26,9 @@ const mutations = {
   [types.SET_VERTICALS] (state, data) {
     state.verticals = data
   },
-  // [types.SET_DEMO_BASE_CONFIG] (state, data) {
-  //   state.demoBaseConfig = data[0]
-  // },
+  [types.SET_DEMO_INFO] (state, data) {
+    state.demoInfo = data[0]
+  },
   [types.SET_INSTANCE] (state, data) {
     console.log('SET_INSTANCE', data)
     state.instance = data[0]
@@ -70,7 +70,7 @@ const getters = {
   // is this demo locked to disable provisioning?
   isLocked: () => {
     return false
-    // return getters.demoBaseConfig.locked === true
+    // return getters.demoInfo.locked === true
   },
   // which vertical the demo website is set to 
   verticals: state => state.verticals,
@@ -87,7 +87,7 @@ const getters = {
     }
   },
   // the base demo configuration for this instant demo
-  // demoBaseConfig: state => state.demoBaseConfig,
+  demoInfo: state => state.demoInfo,
   // the instant demo instance information, like session ID and datacenter
   instance: state => state.instance,
   // the RDP workstation info
@@ -111,24 +111,24 @@ const getters = {
 }
 
 const actions = {
-  // getDemoBaseConfig ({dispatch, getters}) {
-  //   dispatch('fetch', {
-  //     group: 'dcloud',
-  //     type: 'demoBaseConfig',
-  //     url: getters.endpoints.demoBaseConfig,
-  //     options: {
-  //       query: {
-  //         demo: 'webex',
-  //         version: 'v4prod',
-  //         instant: true
-  //       }
-  //     },
-  //     mutation: types.SET_DEMO_BASE_CONFIG,
-  //     message: 'get demo base config'
-  //   })
-  // },
+  getDemoInfo ({dispatch, getters}) {
+    return dispatch('fetch', {
+      group: 'dcloud',
+      type: 'demo',
+      url: getters.endpoints.demoInfo,
+      options: {
+        query: {
+          demo: 'webex',
+          version: 'v4prod',
+          instant: true
+        }
+      },
+      mutation: types.SET_DEMO_INFO,
+      message: 'get demo base config'
+    })
+  },
   getVerticals ({dispatch, getters}) {
-    dispatch('fetch', {
+    return dispatch('fetch', {
       group: 'dcloud',
       type: 'verticals',
       url: getters.endpoints.vertical,

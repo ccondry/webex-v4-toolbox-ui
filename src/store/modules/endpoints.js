@@ -23,7 +23,7 @@ const getters = {
       webex: authUrlBase + '/resource/joinWebexSupportRoom',
       authVersion: authUrlBase + '/version',
       logout: authUrlBase + '/logout',
-      // demoBaseConfig: mmUrlBase + '/demo',
+      demoInfo: mmUrlBase + '/demo',
       vertical: mmUrlBase + '/verticals',
       provision: authUrlBase + '/provision',
       userDemoConfig: authUrlBase + '/user/demo',

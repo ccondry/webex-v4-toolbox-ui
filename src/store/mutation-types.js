@@ -22,3 +22,5 @@ export const SET_INSTANCE = 'SET_DCLOUD_SESSION'
 export const SET_DESKTOP_LAYOUT = 'SET_DESKTOP_LAYOUT'
 // global agent desktop layout
 export const SET_GLOBAL_DESKTOP_LAYOUT = 'SET_GLOBAL_DESKTOP_LAYOUT'
+// dcloud demo base configuration
+export const SET_DEMO_INFO = 'SET_DEMO_INFO'

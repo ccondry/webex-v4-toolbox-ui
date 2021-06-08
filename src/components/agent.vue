@@ -85,11 +85,20 @@
       >
         <strong>
           Agent Desktop:
-          <a :href="agentPortalUrl" target="_blank">
+          <span v-show="isLoading">Loading...</span>
+          <a
+          v-show="agentPortalUrl.length > 0"
+          :href="agentPortalUrl"
+          target="_blank"
+          >
             {{ agentPortalUrl }}
           </a>
         </strong>
-        <copy :value="agentPortalUrl" name="Agent Desktop URL" />
+        <copy
+        v-show="agentPortalUrl.length > 0"
+        :value="agentPortalUrl"
+        name="Agent Desktop URL"
+        />
       </p>
 
       <!-- control hub URL -->
@@ -99,11 +108,19 @@
       >
         <strong>
           Control Hub:
-          <a :href="webexAdminPortalUrl" target="_blank">
+          <span v-show="isLoading">Loading...</span>
+          <a
+          v-show="webexAdminPortalUrl.length > 0"
+          target="_blank"
+          >
             {{ webexAdminPortalUrl }}
           </a>
         </strong>
-        <copy :value="webexAdminPortalUrl" name="Control Hub URL" />
+        <copy
+        v-show="webexAdminPortalUrl.length > 0"
+        :value="webexAdminPortalUrl"
+        name="Control Hub URL"
+        />
       </p>
 
       <!-- mangement portal URL -->
@@ -115,7 +132,9 @@
         style="display: inline-block"
         >
           Management Portal:
+          <span v-show="isLoading">Loading...</span>
           <a
+          v-show="cjpAdminPortalUrl.length > 0"
           :href="cjpAdminPortalUrl"
           target="_blank"
           >
@@ -126,7 +145,11 @@
             </span>
           </a>
         </strong>
-        <copy :value="cjpAdminPortalUrl" name="Management Portal URL" />
+        <copy
+        v-show="cjpAdminPortalUrl.length > 0"
+        :value="cjpAdminPortalUrl"
+        name="Management Portal URL"
+        />
       </p>
     </article>
   </div>
@@ -145,10 +168,33 @@ export default {
 
   computed: {
     ...mapGetters([
-      'agentPortalUrl',
-      'webexAdminPortalUrl',
-      'cjpAdminPortalUrl'
-    ])
+      'demoInfo',
+      'loading'
+    ]),
+    isLoading () {
+      return this.loading.dcloud.demo
+    },
+    agentPortalUrl () {
+      try {
+        return this.demoInfo.links.agentPortal
+      } catch (e) {
+        return ''
+      }
+    },
+    cjpAdminPortalUrl () {
+      try {
+        return this.demoInfo.links.managementPortal
+      } catch (e) {
+        return ''
+      }
+    },
+    webexAdminPortalUrl () {
+      try {
+        return this.demoInfo.links.controlHub
+      } catch (e) {
+        return ''
+      }
+    }
   },
   
   methods: {
