@@ -4,9 +4,15 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.6.8-1
+
+### Features
+* **Agents:** Separate admin and supervisor management portal URLs.
+
+
 # 2021.6.8
 
-### Fixes
+### Features
 * **Agents:** Get agent and admin links from dCloud demo base configuration
 data in the database.
 
