@@ -123,9 +123,9 @@
         />
       </p>
 
-      <!-- mangement portal URL -->
+      <!-- superivsor mangement portal URL -->
       <p
-      v-if="['Supervisor', 'Administrator'].includes(agent.role)"
+      v-if="['Supervisor'].includes(agent.role)"
       style="white-space: nowrap; "
       >
         <strong
@@ -148,6 +148,35 @@
         <copy
         v-show="cjpAdminPortalUrl.length > 0"
         :value="cjpAdminPortalUrl"
+        name="Management Portal URL"
+        />
+      </p>
+
+      <!-- admin mangement portal URL -->
+      <p
+      v-if="['Administrator'].includes(agent.role)"
+      style="white-space: nowrap; "
+      >
+        <strong
+        style="display: inline-block"
+        >
+          Management Portal:
+          <span v-show="isLoading">Loading...</span>
+          <a
+          v-show="adminManagementPortalUrl.length > 0"
+          :href="adminManagementPortalUrl"
+          target="_blank"
+          >
+            <span
+            style="display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 24rem; vertical-align: top;"
+            >
+              {{ adminManagementPortalUrl }}
+            </span>
+          </a>
+        </strong>
+        <copy
+        v-show="adminManagementPortalUrl.length > 0"
+        :value="adminManagementPortalUrl"
         name="Management Portal URL"
         />
       </p>
@@ -186,6 +215,13 @@ export default {
         return this.demoInfo.links.managementPortal
       } catch (e) {
         return ''
+      }
+    },
+    adminManagementPortalUrl () {
+      try {
+        return this.demoInfo.links.adminManagementPortal
+      } catch (e) {
+        return 'Loading...'
       }
     },
     webexAdminPortalUrl () {
