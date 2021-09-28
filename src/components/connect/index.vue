@@ -1,5 +1,5 @@
 <template>
-  <panel title="Agent Conection" aria-id="agent-connection">
+  <panel title="Agent Connection" aria-id="agent-connection">
     <div style="display: flex; flex-wrap: wrap;">
       <!-- VPN -->
       <div style="flex: 1 1;">
