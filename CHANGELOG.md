@@ -4,6 +4,12 @@ Version numbers are semver-compatible dates in YYYY.MM.DD-X format,
 where X is the revision number
 
 
+# 2021.9.28
+
+### Fixes
+* **Agent Connection:** Fix typo in box header.
+
+
 # 2021.6.8-1
 
 ### Features
