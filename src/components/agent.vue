@@ -45,7 +45,18 @@
         </strong>
         <copy :value="agent.username" name="Webex Username" />
       </p>
-      
+
+      <!-- salesforce login -->
+      <p
+      v-if="['Agent'].includes(agent.role)"
+      style="white-space: nowrap;"
+      >
+        <strong>
+          Salesforce Login: sjeffers@cc1.dc-01.com
+        </strong>
+        <copy value="sjeffers@cc1.dc-01.com" name="Salesforce Login" />
+      </p>
+
       <!-- rdp username -->
       <p
       v-if="['Agent', 'Supervisor'].includes(agent.role)"
@@ -98,6 +109,29 @@
         v-show="agentPortalUrl.length > 0"
         :value="agentPortalUrl"
         name="Agent Desktop URL"
+        />
+      </p>
+
+      <!-- agent salesforce desktop URL -->
+      <p
+      v-if="['Agent'].includes(agent.role)"
+      style="white-space: nowrap;"
+      >
+        <strong>
+          Salesforce Desktop:
+          <span v-show="isLoading">Loading...</span>
+          <a
+          v-show="salesforceUrl.length > 0"
+          :href="salesforceUrl"
+          target="_blank"
+          >
+            {{ salesforceUrl }}
+          </a>
+        </strong>
+        <copy
+        v-show="salesforceUrl.length > 0"
+        :value="salesforceUrl"
+        name="Salesforce Desktop URL"
         />
       </p>
 
@@ -203,6 +237,9 @@ export default {
     isLoading () {
       return this.loading.dcloud.demo
     },
+    salesforceUrl () {
+      return 'https://login.salesforce.com'
+    },
     agentPortalUrl () {
       try {
         return this.demoInfo.links.agentPortal
@@ -212,7 +249,7 @@ export default {
     },
     cjpAdminPortalUrl () {
       try {
-        return this.demoInfo.links.managementPortal
+        return this.demoInfo.links.managementPortal.trim()
       } catch (e) {
         return ''
       }
